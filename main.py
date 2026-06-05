@@ -1,6 +1,10 @@
 import argparse
 
-SCRAPERS = {}
+from src.jobscraper.scrapers.linkedin_scraper import add_linkedin_arguments, scrape_linkedin
+
+SCRAPERS = {
+    "linkedin": (add_linkedin_arguments, scrape_linkedin),
+}
 
 
 def create_parser():
